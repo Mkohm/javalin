@@ -17,6 +17,9 @@ interface test {
 class ErrorMapper : test {
     val errorHandlerMap = HashMap<Int, Handler>()
     fun handle(statusCode: Int, ctx: Context) = errorHandlerMap[statusCode]?.handle(ctx)
+    
+    
+    
     override fun notused() {}
 
     override fun alsonotused() {}
