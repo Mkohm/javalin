@@ -11,6 +11,7 @@ import java.util.*
 
 interface test {
     fun notused()
+    
     fun alsonotused()
 }
 
