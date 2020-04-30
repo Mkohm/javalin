@@ -9,17 +9,9 @@ package io.javalin.http
 import io.javalin.core.util.Header
 import java.util.*
 
-interface test {
-    fun notused()
-    fun alsonotused()
-}
-
-class ErrorMapper : test {
+class ErrorMapper {
     val errorHandlerMap = HashMap<Int, Handler>()
     fun handle(statusCode: Int, ctx: Context) = errorHandlerMap[statusCode]?.handle(ctx)
-    override fun notused() {}
-
-    override fun alsonotused() {}
 }
 
 fun contentTypeWrap(contentType: String, errorHandler: Handler) = Handler { ctx ->
